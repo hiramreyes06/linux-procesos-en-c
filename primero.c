@@ -30,6 +30,14 @@ pid_t procid;
 printf("My current process id is %d \n", getpid() );
 
 procid = fork();
+
+if(procid == 0){
+printf("Soy el proceso hijo del proceso padre \n");
+}else{
+printf("Soy el proceso padre %d \n", getpid() );
+}
+
+
 printf("Fork ID %d \n", procid);
 
 
